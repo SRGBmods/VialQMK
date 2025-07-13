@@ -1,0 +1,10 @@
+This is a bit involved as it requires foreknowledge of the Index values for your indicators (CAPS, NUM, SCROLL) in advance.
+Once you know the above value(s) a slight modification is required to either signalrgb.c
+Replace the CAPS_LOCK_LED_INDEX, NUM_LOCK_LED_INDEX, or SCROLL_LOCK_LED_INDEX with the index values for your keyboard.
+
+So if CAPS_LOCK Index is 36 this line:
+if ((index + i) == CAPS_LOCK_LED_INDEX && host_keyboard_led_state().caps_lock)   {
+Becomes this line:
+if ((index + i) == 36 && host_keyboard_led_state().caps_lock)   {
+
+Make sure to uncomment the other lines mentioned below that if line!
