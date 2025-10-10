@@ -1,0 +1,20 @@
+// Copyright 2024 FxStudio <FXS@fx-studio.cn>
+// SPDX-License-Identifier: GPL-2.0-or-later
+
+#pragma once
+
+#define RGBLED_NUM 17
+#define DRIVER_LED_TOTAL 17
+#define RGB_MATRIX_LED_COUNT 17
+
+#define WS2812_PWM_COMPLEMENTARY_OUTPUT
+#define WS2812_PWM_DRIVER PWMD1
+#define WS2812_PWM_CHANNEL 1
+#define WS2812_PWM_PAL_MODE 1
+#define WS2812_DMA_STREAM STM32_DMA2_STREAM5
+#define WS2812_DMA_CHANNEL 6
+
+#define RGB_MATRIX_FRAMEBUFFER_EFFECTS
+#define RGB_MATRIX_KEYPRESSES
+#define RGB_MATRIX_SLEEP  // turn off effects when suspended
+#define RGB_MATRIX_STARTUP_MODE RGB_MATRIX_CYCLE_LEFT_RIGHT
